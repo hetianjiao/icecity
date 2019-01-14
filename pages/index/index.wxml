@@ -1,0 +1,69 @@
+<view class='warp'>
+  <swiper class='swiper' current='{{currentSwiper}}' autoplay bindchange='swiperChange'>
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src='{{item}}' class='img'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='dots'>
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <view class='dot {{index == currentSwiper ?"active":""}}' ></view>
+    </block>
+  </view>
+</view>
+<view class='content'>
+  <scroll-view class="menu">
+    <block wx:for="{{menuList}}" wx:key="">
+      <view style='position:relative'>
+       <view class='item {{index==menuActive?"menuActive":""}}' catchtap='menuClick' data-index="{{index}}">       
+        <image src='{{item.icon}}' hidden='{{item.icon==""}}' class='icon'></image>
+        <view>
+           {{item.name}}
+        </view>       
+       </view>        
+       <view class='update' hidden='{{item.update==0}}'>{{item.update}}</view>
+      </view>
+    </block>
+  </scroll-view>
+  <scroll-view  scroll-y class='commodityList'>
+   <block wx:for="{{menu[menuActive].commodityList}}" wx:key="">   
+    <view class='commodity'> 
+      <view style='position:relative'>
+        <image src='{{item.url}}' class='commodityImg'></image>
+        <view class='{{item.newCommodity==true?"newCommodity":""}} '></view>
+      </view>
+      <view class='details'> 
+        <view class='title'> {{item.name}} </view>
+        <view class='price'> ￥{{item.price}} </view>
+      </view>
+      <view class='commodityCount'>
+        <view class='remove' bindtap='removeFromTrolley' data-index="{{index}}" hidden="{{item.count==0}}">-</view>
+        <view class='count' hidden="{{item.count==0}}">{{item.count}}</view>
+        <view class='add' bindtap='addToTrolley' data-index="{{index}}">+</view>
+      </view>     
+    </view>
+   </block>
+  </scroll-view> 
+  <!--购物车 -->
+  <view class='trolley'>
+    <view class='trolleyCar'>
+      <image src='http://47.105.139.205/trolleyCar.png' class='trolley_img'></image>
+    </view>
+    <view class='trolleyInfo'>
+      <view class='price_view'>
+        <view class='price_content'>
+          <view style='font-size:24rpx;'>￥</view>
+          <view class='price'>6.39</view>
+         <view class='original_price'>￥7.99</view>        
+        </view>
+        <view class='price_describe'>已减1.60元</view>
+      </view>          
+    </view>
+    <view class='bar_code'>
+      <image src='http://47.105.139.205/scaner.png' style='width:150rpx;height:150rpx;'></image>
+      <view class='scanner'>扫条形码</view>      
+    </view>
+    <view class='trolleyPay'>去支付</view>
+  </view> 
+</view>

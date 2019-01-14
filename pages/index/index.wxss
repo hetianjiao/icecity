@@ -1,0 +1,262 @@
+.warp{
+  height: auto;
+  position: relative;
+}
+.swiper{
+  height: 220rpx;
+}
+.swiper .img{
+  width: 100%;
+  height: 100%;
+}
+.dots{
+  width: 256rpx;
+  height: 36rpx;
+  display: flex;  
+  flex-direction: row;
+  position: absolute;
+  right: 20rpx;
+  bottom: 5rpx;
+  justify-content: center;
+  align-items: center;
+}
+.dot{
+ width: 30rpx;
+ height: 8rpx;
+ border-radius: 30rpx;
+ margin-right: 10rpx; 
+ background-color: white;
+ opacity: 0.5;
+}
+.active{
+  width: 70rpx; 
+  background-color: white;
+  opacity: 1;
+}
+.content{
+  display: flex;
+  height: auto; 
+}
+.menu{
+  position: relative;
+  width: 150rpx; 
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  height: 610rpx;
+}
+.menu .item{
+  width: 150rpx;
+  height: 100rpx;  
+  line-height: 100rpx;
+  border-bottom: 1rpx dashed #ECECEC;
+  text-align: center;
+  font-size: 28rpx;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.menu .icon{
+  width:35rpx;
+  height:40rpx;
+  line-height:100rpx;
+  margin-right:10rpx;
+}
+.menu .menuActive{
+  background-color: white;
+  font-weight: bold;
+}
+.menu .menuActive::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100rpx;
+  width: 7rpx;
+  background:#FFD161;
+
+}
+.menu .update{
+  background-color: red;
+  color: white;
+  position: absolute;
+  top:5rpx;
+  right: 5rpx;
+  line-height: 27rpx;
+  border-radius: 50%;
+  width: 30rpx;
+  height:30rpx;
+  text-align: center;  
+  font-size: 30rpx;
+}
+.commodityList{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 1000rpx;
+}
+.commodity::before{
+  content: "";
+  width: 15rpx;
+  height: 100%;
+  left: -15rpx;
+  top: 0;
+  border: 1px solid white;
+}
+.commodity{  
+  display: flex;
+  align-items: center;
+  height: 170rpx;  
+}
+.commodityImg{
+  width: 120rpx;
+  height: 120rpx;
+}
+.details{
+  flex: 1;
+  width: 100rpx;
+}
+.details .title{
+  font-size: 30rpx;  
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.details .price{
+  font-size: 30rpx;
+  color: #FFD161;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+.commodityCount{  
+  width: 130rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 95rpx;
+  margin-right: 30rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+}
+.add,.remove{
+  border-radius: 50%;
+  width: 40rpx;
+  height:40rpx;
+  text-align: center;
+  border: 2px solid #FFD161;
+}
+.add{
+  background-color: #FFD161;
+  color: white; 
+  line-height: 37rpx;
+  font-size: 35rpx;
+  font-weight: 700;
+  margin-left: 15rpx;  
+}
+.count{
+  margin-left: 15rpx;
+}
+.remove{   
+  color: #FFD161;  
+  line-height: 28rpx;
+  font-weight: 500;
+  font-size: 60rpx;
+}
+.newCommodity{
+  position: absolute;
+  top: -10rpx;
+  left:0rpx;
+  width: 70rpx;
+  height: 28rpx;
+  background-image: url('http://47.105.139.205/icon2.png');
+  background-size: 100% 100%;
+}
+/**购物车**/
+.trolley{
+  position: absolute;    
+  height: 150rpx;
+  background-color: #FABE39;
+  bottom: 50rpx;
+  left: 20rpx;
+  right: 20rpx;
+  border-radius: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trolley .trolleyCar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background-color: #FCC449;
+  text-align: center;
+}
+.trolley .trolleyCar .trolley_img{
+  width: 140rpx;
+  height: 140rpx;
+}
+.trolley .trolleyInfo{
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;  
+  flex: 1;
+}
+.trolley .trolleyInfo .price_view{
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  flex-direction:column;
+  flex: 1;
+  z-index: 1;
+  margin-left: 20rpx;
+}
+.trolley .trolleyInfo .price_view .price_content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;    
+}
+.trolley .trolleyInfo .price_view .price_content .price{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.trolley .trolleyInfo .price_view .price_content .original_price{
+  font-size: 20rpx; 
+  text-decoration:line-through;
+  color: #836523;
+  margin-left: 10rpx;
+}
+.trolley  .bar_code{
+  font-size: 20rpx;
+  background-color: #FABE39;
+  border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 3%;  
+  box-shadow: 35rpx 0px 5rpx -30rpx rgba(0,0,0,0.1),
+                -35rpx 0px 5rpx -30rpx rgba(0,0,0,0.1);   
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+}
+.trolley  .bar_code .scanner{
+  margin-top: -30rpx;
+}
+.trolley .trolleyInfo .price_view .price_describe{
+  font-size: 20rpx;
+
+}
+.trolley .trolleyPay{
+ width: 180rpx;
+ height: 90rpx;
+ background-color: black;
+ border-radius: 50rem;
+ margin-right: 30rpx;
+ color: white;
+ text-align: center;
+ line-height: 90rpx;
+ font-size: 40rpx; 
+}

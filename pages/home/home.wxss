@@ -1,0 +1,175 @@
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.orderPage-sideBar{
+  width: 150rpx;
+  height: 1130rpx;
+  background: #F4F4F4;
+}
+.menuList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menuList .menu{
+  height: 100rpx;
+  width: 150rpx;
+  position: relative;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  border-bottom: 1px dashed #ECECEC;
+}
+
+.selected.menu::before{
+  content: "";
+  position: absolute;
+  left: 0rpx; 
+  top: 30rpx;
+  height: 40rpx;
+  width: 7rpx;
+  background-color: #FFD161;
+}
+.selected{
+  background-color: #FFFFFF;
+}
+.foodList{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%; 
+}
+.food{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 170rpx;
+  border-bottom: 1rpx solid #ECECEC;
+}
+.food::before{
+  content: "";
+  width:15rpx;
+  height: 100%;
+  left: -15rpx;
+  top: 0;
+  border: 1px solid white;
+}
+.food .img{
+  width:120rpx;
+  height: 120rpx;
+}
+.food-info{
+  padding-left: 15rpx;
+  line-height:48rpx;
+  flex:1;
+}
+.food.name{
+  font-size: 30rpx;  
+}
+.food .sales{
+  font-size:25rpx;
+  color: #ACACAC;
+}
+.food .price{
+  font-size: 30rpx;
+  color: red;
+}
+.food-numb{
+  height: 40rpx;
+  width:130rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 95rpx;
+  margin-right: 30rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+}
+.food-numb .add,.food-numb .remove{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius:30rpx;
+  text-align: center;
+}
+.food-numb .add{
+  font-size: 35rpx;
+  line-height: 37rpx;
+  font-weight: 700;
+  background: #FFD161;
+  margin-left: 15rpx;
+}
+.food-numb .remove{
+  margin-right:15rpx;
+  line-height:28rpx;
+  font-size:60rpx;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: solid 2rpx #b0b0b0;
+  color: #b0b0b0;
+}
+.footer{
+  display: flex;
+  height: 100rpx;  
+  position: absolute;
+  right: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+}
+.footer .howMuch{
+  position: relative;
+  flex: 1;
+  font-size: 28rpx;
+  background: white;
+  line-height: 100rpx;
+  padding-left: 130rpx;
+}
+.footer .img{
+  position: absolute;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100rpx;
+  left: 20rpx;
+  top: -45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#E7E7E7;
+}
+
+.footer .pay{
+  width: 200rpx;
+  text-align:center;
+  line-height:100rpx;
+  color: white;
+  font-size: 30rpx;
+  background:#CCCCCC;
+}
+.footer .cost{
+  color: red;
+  font-size: 50rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 100rpx;
+  margin-top: 10rpx;
+}
+
+.footer.active .free{
+  font-size: 25rpx;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.footer.active .pay{
+  background: #FFD161;
+  color: black;
+}
+.overlay{
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: black;  
+  display: block;  
+  opacity: 0.5;
+  height: 100%
+}
